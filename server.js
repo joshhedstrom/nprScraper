@@ -26,7 +26,8 @@ app.get("/scrape", (req, res) => {
 
         $("div a h3").each((i, element) => {
             let result = {};
-            result.title = $(element).text()
+            result.title = $(element).text();
+            result.summary = $(element).parent().next().children('p').text()
             result.link = $(element).parent().attr("href");
             console.log(result)
 
