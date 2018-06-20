@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const axios = require("axios");
 const cheerio = require("cheerio");
 
-// const db = require("./models");
+const db = require("./models");
 
 const port = 3000;
 
@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-// mongoose.connect("mongodb://localhost/nprScraper");
+mongoose.connect("mongodb://localhost/nprScraper");
 
 app.get("/scrape", (req, res) => {
     axios.get("http://www.npr.org/").then(response => {
@@ -29,15 +29,15 @@ app.get("/scrape", (req, res) => {
             result.title = $(element).text();
             result.summary = $(element).parent().next().children('p').text()
             result.link = $(element).parent().attr("href");
-            console.log(result)
+            // console.log(result)
 
-            // db.Article.create(result)
-            //     .then(dbArticle => {
-            //         console.log(dbArticle);
-            //     })
-            //     .catch(err => {
-            //         return res.json(err);
-            //     });
+            db.Article.create(result)
+                .then(dbArticle => {
+                    console.log(dbArticle);
+                })
+                .catch(err => {
+                    console.log(`ERROR:: ${err}`);
+                });
         });
         res.send("Scrape Complete");
     });
