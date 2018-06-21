@@ -2,16 +2,14 @@
 	<h1 class="main-title">NPR Article Scraper</h1>
 </div>
 <nav>
-	<button href="/scrape">Scrape New Articles</button>
+	<a href="/scrape">Scrape New Articles</a>
 </nav>
 <div class="all-articles">
-	{{!-- <ul> --}}
-		{{#each articles}}
-		<div class="article">
+	{{#each articles}}
+		<div class="article-element">
 			<h4 class="article-title">{{title}}</h4>
 			<p class="article-summary">{{summary}}</p>
-			<a class="article-link" href="{{link}}">Link to article</a>
+			<a class="article-link" href="{{link}}" target="_blank">Link to article</a>
 		</div>
-		{{/each}}
-	{{!-- </ul> --}}
+	{{/each}}
 </div>

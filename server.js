@@ -42,7 +42,7 @@ app.get("/scrape", (req, res) => {
 
             db.Article.create(result)
                 .then(dbArticle => {
-                    console.log(dbArticle);
+                    // console.log(dbArticle);
                 })
                 .catch(err => {
                     console.log(`ERROR:: ${err}`);

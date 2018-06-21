@@ -15,15 +15,34 @@ body {
 	color: #333333;
 }
 
+nav {
+	text-align: center;
+	padding: 1%;
+	font-weight: bold;
+}
+
+nav a {
+	text-decoration: none;
+	color: black;
+	border: 2px solid #2c63ae;
+	border-radius: 5px;
+	padding: 1px;
+	background-color: #ffffff;
+}
+
+nav a:hover {
+	border-width: 3px;
+}
+
 .all-articles {
 	text-align: center;
 }
 
-.article {
-	border: 1px solid black;
+.article-element {
+	border: 2px solid black;
 	border-radius: 5px;
-	margin: 5px;
-	padding: 2px;
+	margin: 1%;
+	padding-bottom: 1%;
 	background-color: #ffffff;
 }
 
@@ -37,5 +56,13 @@ body {
 }
 
 .article-link {
+	text-decoration: none;
+	color: black;
+	border: 3px solid #2c63ae;
+	border-radius: 5px;
+	padding: 1px;
+}
 
+.article-link:hover {
+	font-weight: bold;
 }
