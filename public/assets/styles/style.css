@@ -1,0 +1,41 @@
+body {
+	background-color: #e0e0e0;
+}
+
+.main-banner {
+	text-align: center;
+	border-style: solid;
+	border-color: #2c63ae;
+	border-width: 3px;
+	border-radius: 5px;
+}
+
+.main-title {
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	color: #333333;
+}
+
+.all-articles {
+	text-align: center;
+}
+
+.article {
+	border: 1px solid black;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 2px;
+	background-color: #ffffff;
+}
+
+.article-title {
+	color: #333333;
+
+}
+
+.article-summary {
+	color: #767676;
+}
+
+.article-link {
+
+}

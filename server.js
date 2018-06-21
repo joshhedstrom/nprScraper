@@ -59,7 +59,7 @@ app.get("/articles", (req, res) => {
             let dbArticles = {
                 articles: articles,
             }
-          console.log(articles)
+          // console.log(articles)
             res.render('index', dbArticles);
         })
         .catch(err => {

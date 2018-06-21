@@ -4,12 +4,14 @@
 <nav>
 	<button href="/scrape">Scrape New Articles</button>
 </nav>
-<div class="articles">
+<div class="all-articles">
 	{{!-- <ul> --}}
 		{{#each articles}}
-			<h4>{{title}}</h4>
-			<p>{{summary}}</p>
-			<a href="{{link}}">Link</a>
+		<div class="article">
+			<h4 class="article-title">{{title}}</h4>
+			<p class="article-summary">{{summary}}</p>
+			<a class="article-link" href="{{link}}">Link to article</a>
+		</div>
 		{{/each}}
 	{{!-- </ul> --}}
 </div>
