@@ -18,7 +18,17 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
+const exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+
 mongoose.connect("mongodb://localhost/nprScraper");
+
+app.get('/', (req, res) => {
+  res.render('index')
+})
 
 app.get("/scrape", (req, res) => {
     axios.get("http://www.npr.org/").then(response => {
@@ -29,7 +39,6 @@ app.get("/scrape", (req, res) => {
             result.title = $(element).text();
             result.summary = $(element).parent().next().children('p').text()
             result.link = $(element).parent().attr("href");
-            // console.log(result)
 
             db.Article.create(result)
                 .then(dbArticle => {
@@ -46,8 +55,12 @@ app.get("/scrape", (req, res) => {
 // Route for getting all Articles from the db
 app.get("/articles", (req, res) => {
     db.Article.find({})
-        .then(dbArticle => {
-            res.json(dbArticle);
+        .then(articles => {
+            let dbArticles = {
+                articles: articles,
+            }
+          console.log(articles)
+            res.render('index', dbArticles);
         })
         .catch(err => {
             res.json(err);

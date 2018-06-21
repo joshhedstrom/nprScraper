@@ -1,0 +1,15 @@
+<div class="main-banner">
+	<h1 class="main-title">NPR Article Scraper</h1>
+</div>
+<nav>
+	<button href="/scrape">Scrape New Articles</button>
+</nav>
+<div class="articles">
+	{{!-- <ul> --}}
+		{{#each articles}}
+			<h4>{{title}}</h4>
+			<p>{{summary}}</p>
+			<a href="{{link}}">Link</a>
+		{{/each}}
+	{{!-- </ul> --}}
+</div>
