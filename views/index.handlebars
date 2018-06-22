@@ -4,22 +4,5 @@
 <nav>
 	<a href="/scrape">Scrape New Articles</a>
 </nav>
-<div class="all-articles">
-	{{#each articles}}
-		<div class="article-element">
-			<h4 class="article-title">{{title}}</h4>
-			<p class="article-summary">{{summary}}</p>
-			<a class="link" href="{{link}}" target="_blank">Link to article</a>
-			<a class="link comment-link" href="">Comments</a>
-			<div class="all-comments">
-				{{#each ../comments}}
-					<div class="comment">
-						<p class="comment-body">{{body}}</p>
-						<p class="comment-time">{{time}}</p>
-						<p class="comment-user">{{user}}</p>
-					</div>
-				{{/each}}
-			</div>
-		</div>
-	{{/each}}
-</div>
+
+<h1>this is the homepage</h1>
