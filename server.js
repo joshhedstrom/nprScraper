@@ -27,7 +27,8 @@ app.set("view engine", "handlebars");
 mongoose.connect("mongodb://localhost/nprScraper");
 
 app.get('/', (req, res) => {
-  res.render('index')
+    res.redirect('/articles')
+  // res.render('index')
 })
 
 app.get("/scrape", (req, res) => {
@@ -48,7 +49,7 @@ app.get("/scrape", (req, res) => {
                     console.log(`ERROR:: ${err}`);
                 });
         });
-        res.send("Scrape Complete");
+        res.redirect('/articles');
     });
 });
 
@@ -56,8 +57,19 @@ app.get("/scrape", (req, res) => {
 app.get("/articles", (req, res) => {
     db.Article.find({})
         .then(articles => {
+
+            let comments = {
+                title: 'Comment Title',
+                body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum culpa tempore, voluptates vitae. Deserunt numquam distinctio esse non quod dolorem excepturi tempore error perferendis adipisci, aspernatur dolores suscipit ipsam, maiores!',
+                user: 'thisUser',
+                time: 'July 4th, 1776'
+            }
             let dbArticles = {
                 articles: articles,
+                comments: comments,
+            }
+
+            let dbComments = {
             }
           // console.log(articles)
             res.render('index', dbArticles);
