@@ -12,12 +12,11 @@
 			<a class="article-link" href="{{link}}" target="_blank">Link to article</a>
 			<a class="comments-link" href="">All Comments</a>
 			<div class="all-comments">
-				{{#each comments}}
+				{{#each ../comments}}
 					<div class="comment">
-						<h5 class="comment-title">{{comments.title}}</h5>
-						<p class="comment-body">{{comments.body}}</p>
-						<p class="comment-user">{{comments.user}}</p>
-						<p class="comment-time">{{comments.time}}</p>
+						<p class="comment-body">{{body}}</p>
+						<p class="comment-user">{{user}}</p>
+						<p class="comment-time">{{time}}</p>
 					</div>
 				{{/each}}
 			</div>

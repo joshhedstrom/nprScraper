@@ -58,18 +58,14 @@ app.get("/articles", (req, res) => {
     db.Article.find({})
         .then(articles => {
 
-            let comments = {
-                title: 'Comment Title',
+            let comments = [{
                 body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum culpa tempore, voluptates vitae. Deserunt numquam distinctio esse non quod dolorem excepturi tempore error perferendis adipisci, aspernatur dolores suscipit ipsam, maiores!',
                 user: 'thisUser',
                 time: 'July 4th, 1776'
-            }
+            }]
             let dbArticles = {
                 articles: articles,
                 comments: comments,
-            }
-
-            let dbComments = {
             }
           // console.log(articles)
             res.render('index', dbArticles);
