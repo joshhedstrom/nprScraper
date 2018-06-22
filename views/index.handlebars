@@ -9,14 +9,14 @@
 		<div class="article-element">
 			<h4 class="article-title">{{title}}</h4>
 			<p class="article-summary">{{summary}}</p>
-			<a class="article-link" href="{{link}}" target="_blank">Link to article</a>
-			<a class="comments-link" href="">All Comments</a>
+			<a class="link" href="{{link}}" target="_blank">Link to article</a>
+			<a class="link comment-link" href="">Comments</a>
 			<div class="all-comments">
 				{{#each ../comments}}
 					<div class="comment">
 						<p class="comment-body">{{body}}</p>
-						<p class="comment-user">{{user}}</p>
 						<p class="comment-time">{{time}}</p>
+						<p class="comment-user">{{user}}</p>
 					</div>
 				{{/each}}
 			</div>

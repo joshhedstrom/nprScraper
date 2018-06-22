@@ -55,7 +55,7 @@ nav a:hover {
 	color: #767676;
 }
 
-.article-link {
+.link {
 	text-decoration: none;
 	color: black;
 	border: 3px solid #2c63ae;
@@ -67,26 +67,27 @@ nav a:hover {
 	font-weight: bold;
 }
 
-.comments-link {
-
-}
-
 .all-comments {
-
+	/*border: 2px solid black;*/
+	display: none;
 }
 
 .comment {
-
+	border: 1px solid black;
+	margin: 1%;
 }
 
 .comment-body {
-
+	text-align: left;
+	padding: 1%;
 }
 
 .comment-user {
-
+	text-align: left;
+	padding-left: 6%;
 }
 
 .comment-time {
-
+	float: right;
+	padding-right: 6%;
 }
