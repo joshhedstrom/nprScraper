@@ -9,9 +9,6 @@ const logger = require("morgan");
 
 const mongoose = require("mongoose");
 
-const axios = require("axios");
-const cheerio = require("cheerio");
-
 app.use(logger("dev"));
 app.use(bodyParser.urlencoded({
     extended: true
