@@ -1,93 +1,122 @@
-body {
-	background-color: #e0e0e0;
+body
+{
+    background-color: #e0e0e0;
 }
 
-.main-banner {
-	text-align: center;
-	border-style: solid;
-	border-color: #2c63ae;
-	border-width: 3px;
-	border-radius: 5px;
+.main-banner
+{
+    text-align: center;
+
+    border-width: 3px;
+    border-style: solid;
+    border-color: #2c63ae;
+    border-radius: 5px;
 }
 
-.main-title {
-	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-	color: #333333;
+.main-title
+{
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+
+    color: #333;
 }
 
-nav {
-	text-align: center;
-	padding: 1%;
-	font-weight: bold;
+nav
+{
+    font-weight: bold;
+
+    padding: 1%;
+
+    text-align: center;
 }
 
-nav a {
-	text-decoration: none;
-	color: black;
-	border: 2px solid #2c63ae;
-	border-radius: 5px;
-	padding: 1px;
-	background-color: #ffffff;
+nav a
+{
+    padding: 1px;
+
+    text-decoration: none;
+
+    color: black;
+    border: 2px solid #2c63ae;
+    border-radius: 5px;
+    background-color: #fff;
 }
 
-nav a:hover {
-	border-width: 3px;
+nav a:hover
+{
+    border-width: 3px;
 }
 
-.all-articles {
-	text-align: center;
+.all-articles
+{
+    text-align: center;
 }
 
-.article-element {
-	border: 2px solid black;
-	border-radius: 5px;
-	margin: 1%;
-	padding-bottom: 1%;
-	background-color: #ffffff;
+.article-element
+{
+    margin: 1%;
+    padding-bottom: 1%;
+
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #fff;
 }
 
-.article-title {
-	color: #333333;
-
+.article-title
+{
+    color: #333;
 }
 
-.article-summary {
-	color: #767676;
+.article-summary
+{
+    color: #767676;
 }
 
-.link {
-	text-decoration: none;
-	color: black;
-	border: 3px solid #2c63ae;
-	border-radius: 5px;
-	padding: 1px;
+.link
+{
+    padding: 1px;
+
+    text-decoration: none;
+
+    color: black;
+    border: 3px solid #2c63ae;
+    border-radius: 5px;
 }
 
-.article-link:hover {
-	font-weight: bold;
+.article-link:hover
+{
+    font-weight: bold;
 }
 
-.all-comments {
-	/*border: 2px solid black;*/
-	display: none;
+.all-comments
+{
+    /*border: 2px solid black;*/
+    display: none;
 }
 
-.comment {
-	border: 1px solid black;
-	margin: 1%;
+.comment
+{
+    margin: 1%;
+
+    border: 1px solid black;
 }
 
-.comment-body {
-	text-align: left;
-	padding: 1%;
+.comment-body
+{
+    padding: 1%;
+
+    text-align: left;
 }
 
-.comment-user {
-	text-align: left;
-	padding-left: 6%;
+.comment-user
+{
+    padding-left: 6%;
+
+    text-align: left;
 }
 
-.comment-time {
-	float: right;
-	padding-right: 6%;
+.comment-time
+{
+    float: right;
+
+    padding-right: 6%;
 }

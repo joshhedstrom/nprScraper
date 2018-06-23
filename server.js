@@ -17,7 +17,9 @@ app.use(bodyParser.urlencoded({
 app.use(routes)
 app.use(express.static("public"));
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", exphbs({
+    defaultLayout: "main"
+}));
 app.set("view engine", "handlebars");
 
 mongoose.connect("mongodb://localhost/nprScraper");

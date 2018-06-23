@@ -1,0 +1,22 @@
+<div class="main-banner">
+	<h1 class="main-title">NPR Article Scraper</h1>
+</div>
+<nav>
+	<a href="/scrape">Scrape New Articles</a>
+</nav>
+<h3>Article and Comments</h3>
+<div class="article-element">
+	<h4 class="article-title">{{title}}</h4>
+	<p class="article-summary">{{summary}}</p>
+	<a class="link" href="{{link}}" target="_blank">Link to article</a>
+	<a class="link comment-link" href="">Comments</a>
+	<div class="all-comments" id="{{_id}}">
+		{{#each ../comments}}
+		<div class="comment">
+			<p class="comment-body">{{body}}</p>
+			<p class="comment-time">{{time}}</p>
+			<p class="comment-user">{{user}}</p>
+		</div>
+		{{/each}}
+	</div>
+</div>
