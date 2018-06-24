@@ -45,7 +45,6 @@ router.get("/articles", (req, res) => {
                     articles: articles,
                     comments: comments,
                 }
-                // console.log(articles)
             res.render('articles', dbArticles);
         })
         .catch(err => {
@@ -60,8 +59,9 @@ router.get("/articles/:id", function(req, res) {
         })
         .populate("comment")
         .then(dbArticle => {
-            console.log(dbArticle)
-            res.render('articleComments', dbArticle);
+            console.log([dbArticle])
+            res.render('articleComments', dbArticle)
+            // res.json(dbArticle)
         })
         .catch(err => {
             res.json(err);
@@ -71,7 +71,7 @@ router.get("/articles/:id", function(req, res) {
 // Route for saving/updating an Article's associated Note
 router.post("/articles/:id", (req, res) => {
     db.Comment.create(req.body)
-        .then(dbNote => {
+        .then(dbComment => {
             return db.Article.findOneAndUpdate({
                 _id: req.params.id
             }, {
